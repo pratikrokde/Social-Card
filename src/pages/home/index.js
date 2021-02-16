@@ -1,10 +1,12 @@
 import React from "react";
 import { SignInBtn } from "../../components";
+import { CreatePost, Navbar } from "../../containers";
 
 function Home() {
   return (
     <div>
-      <SignInBtn />
+      <Navbar />
+      <CreatePost />
     </div>
   );
 }
