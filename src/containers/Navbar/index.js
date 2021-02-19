@@ -4,13 +4,13 @@ import { SignInBtn } from "../../components";
 import { UserContext } from "../../context/context";
 
 export default function Navbar() {
-  const [users, setUsers] = useContext(UserContext).user;
-  console.log(users);
+  const [user, setUser] = useContext(UserContext).user;
+  console.log(user);
   return (
     <div className="navbarContainer">
       <div className="navbar">
         <h2>SocialBizz</h2>
-        {users? <img src={ users.photoURL} alt=""/>: <SignInBtn/> }
+        {user ? <img src={user.photoURL} alt="" /> : <SignInBtn />}
       </div>
     </div>
   );

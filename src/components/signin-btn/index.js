@@ -8,8 +8,10 @@ function SignInBtn() {
 
   const signInBtnClick = async () => {
     let userBySignIn = await signInWithGoogle;
-    if (userBySignIn) setUser(userBySignIn);
-    // console.log(userBySignIn);
+    if (userBySignIn) {
+      setUser(userBySignIn);
+    }
+    console.log(user);
   };
   return (
     <div className="signInBtn" onClick={signInBtnClick}>
